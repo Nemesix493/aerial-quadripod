@@ -1,0 +1,5 @@
+# python virtual env
+env/
+
+# local lint_tests
+lint_tests*
