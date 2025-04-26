@@ -12,6 +12,11 @@ A modular steel structure designed for aerial acrobatics practice (e.g. aerial s
   - Bill of materials (BOM)
 - Designed for robustness, portability, and outdoor/indoor use
 
+> [!NOTE]
+> Currently, the generation of TechDraw sheets (PDF/DXF) must be done manually.
+> Due to implementation challenges, full automation of this step in the CI/CD pipeline is not yet available.
+> Work is ongoing to find a stable and reliable solution to automate this process in the future.
+
 ## Tech Stack
 
 - 🧱 **FreeCAD** for 3D modeling and assemblies
