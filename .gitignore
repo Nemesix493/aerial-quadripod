@@ -1,5 +1,10 @@
 # python virtual env
 env/
 
-# local lint_tests
+# local tests
 lint_tests*
+local_tests*
+
+.coverage
+**/__pycache__/
+**.FCBak
