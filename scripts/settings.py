@@ -14,3 +14,6 @@ CAD_FILES_DIR = BASE_DIR / "cad"
 TEMPLATES_DIR = BASE_DIR / "scripts" / "templates"
 
 EXPORT_DIR = BASE_DIR / "exports"
+
+# info file
+INFO_FILE = BASE_DIR / "doc_generation_info.yml"
