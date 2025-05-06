@@ -27,6 +27,8 @@ class ProjectInfoTests(TestCase):
         },
         "parts": [
             {
+                "name": "test_name",
+                "quantity": 10,
                 "material_id": "material_test",
                 "max_length": 200
             }
