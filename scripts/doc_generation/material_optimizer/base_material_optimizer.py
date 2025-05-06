@@ -12,17 +12,19 @@ class MaterialOptimizer(ABC):
     """
 
     @classmethod
-    def get_all(cls) -> chain:
+    def get_all(cls) -> list:
         """Return a chain of all available cutting plans from subclasses.
 
         This method calls `get_all()` on each subclass of MaterialOptimizer.
         Returns:
-            itertools.chain: A chained iterable of all cutting plans.
+            list: A list of all cutting plans.
         """
-        return chain(
-            sub_class.get_all()
-            for sub_class in cls.__subclasses__()
-        )
+        return list(chain(
+            *(
+                sub_class.get_all()
+                for sub_class in cls.__subclasses__()
+            )
+        ))
 
     @property
     def cut_margin(self):

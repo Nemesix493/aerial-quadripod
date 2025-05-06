@@ -1,6 +1,6 @@
 """Unit tests for the base material optimizer class."""
 
-from doc_generation.material_optimizer import LengthOptimizer
+from doc_generation.material_optimizer import MaterialOptimizer
 from ..require_project_info import RequireProjectInfoTestCase
 
 
@@ -9,8 +9,13 @@ class BaseMaterialOptimizerTests(RequireProjectInfoTestCase):
 
     def test_get_all(self):
         """Test that all materials are correctly loaded and associated with optimizers."""
-        length_optimizers = LengthOptimizer.get_all()
+        material_optimizers = MaterialOptimizer.get_all()
         self.assertEqual(
-            len(length_optimizers),
+            len(material_optimizers),
             len(self.info_file_content['materials'])
         )
+        for material_optimizer in material_optimizers:
+            self.assertIsInstance(
+                material_optimizer,
+                MaterialOptimizer
+            )
